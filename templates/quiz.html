@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz - {{ tipo }}</title>
+</head>
+<body>
+    <h1>Quiz de {{ tipo }}</h1>
+    <form method="post">
+        <p>{{ pergunta.num1 }} {{ pergunta.operador }} {{ pergunta.num2 }} = ?</p>
+        <input type="number" name="resposta_usuario" required>
+        <input type="hidden" name="resposta_certa" value="{{ pergunta.resposta }}">
+        <input type="hidden" name="acertos" value="{{ acertos }}">
+        <input type="hidden" name="total" value="{{ total }}">
+        <button type="submit">Responder</button>
+    </form>
+    <p>Acertos: {{ acertos }} / {{ total }}</p>
+</body>
+</html>
